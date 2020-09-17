@@ -14,6 +14,9 @@ class ClassList:
 
     def __init__(self, max_students):
 
+        if max_students <= 0:
+            raise StudentError('Number of maximum students has to be at least one')
+
         self.class_list = []
         self.max_students = max_students
 
